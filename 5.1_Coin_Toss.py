@@ -7,6 +7,26 @@ COIN TOSS PROGRAM
 4.) Create a running total for the number of heads and the number of tails and print the total at the end.
 '''
 
+import random
+
+headsCount = 0
+tailsCount = 0
+totalHeads = [0] * 100
+
+
+
+headsCount = 0
+tailsCount = 0
+for i in range(50):
+    coinFlip = random.randint(0,1)
+    headsCount += 1 if coinFlip == 1 else 0
+    tailsCount += 1 if coinFlip == 0 else 0
+    totalHeads[i] = headsCount
+
+print("Heads count: {}\nTails count: {}".format(headsCount,tailsCount))
+print("Total: {}".format(headsCount + tailsCount))
+
+
 
 
 
